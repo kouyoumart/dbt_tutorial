@@ -9,7 +9,7 @@ My favorite animal is {{my_animals[0]}}
 
 {% for animal in my_animals%}
     My favorite animal is the {{animal}}
-{% endfor %}
+{%- endfor -%}
 
 
 {% set temperature = 65 %}
@@ -18,4 +18,4 @@ My favorite animal is {{my_animals[0]}}
     Time for a cappucino.
 {% else %}
     Time for a beer. 
-{% endif %}
+{%- endif -%}
