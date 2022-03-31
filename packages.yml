@@ -1,9 +1,9 @@
-packages:
-  - package: fivetran/github
-    version: 0.5.1
+#packages:
+  # - package: fivetran/github
+  #   version: 0.5.1
 
-  - package: dbt-labs/dbt_utils
-    version: 0.8.2
+  # - package: dbt-labs/dbt_utils
+  #   version: 0.8.2
 
-  - package: gitlabhq/snowflake_spend
-    version: 1.2.0
+  # - package: gitlabhq/snowflake_spend
+  #   version: 1.2.0
