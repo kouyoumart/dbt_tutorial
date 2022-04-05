@@ -1,3 +1,11 @@
+{# {{ config(schema='test') }} #}
+{# {{config(alias='test_alias')}} #}
+
+{% set country = var('country') %} 
+{% set date_ = var('date') %} 
+
+{{config(alias = date_ ~ '_' ~ country)}}
+
 with customers as (
 
    select * from {{ ref('stg_customers') }}
@@ -37,9 +45,11 @@ final as (
         customer_orders.lifetime_value
 
     from customers
-
     left join customer_orders using (customer_id)
 
 )
+
+ {# select * from final where final.number_of_orders > {{var('nb_orders')}} #}
+ {#      dbt run -s dim_customers --vars 'nb_orders: 4' #}
 
 select * from final
